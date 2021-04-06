@@ -1,0 +1,209 @@
+body#about img{height:15em;}
+body#portfolio img{height:25em;}
+
+@import url('https://fonts.googleapis.com/css2?family=Delius+Swash+Caps&family=Lato&display=swap');
+
+:root{
+    --vertical-space:2rem;
+    --horizontol-space:3rem;
+
+    --light-color:242,242,242;
+    --body-color:#404040;
+    --heading-color:#41117A;
+    --sub-heading-color:#0C1787;
+    --contrast-color:#AD07AD;
+}
+body{
+    font-size: 18px;
+    line-height: 1.5;
+    font-family: 'Delius Swash Caps', cursive;
+    background-image: linear-gradient(45deg, rgba(254, 246, 210, 0.53) 0%, rgba(254, 246, 210, 0.53) 14.286%,rgba(221, 240, 216, 0.53) 14.286%, rgba(221, 240, 216, 0.53) 28.572%,rgba(188, 233, 223, 0.53) 28.572%, rgba(188, 233, 223, 0.53) 42.858%,rgba(156, 227, 229, 0.53) 42.858%, rgba(156, 227, 229, 0.53) 57.144%,rgba(123, 220, 235, 0.53) 57.144%, rgba(123, 220, 235, 0.53) 71.42999999999999%,rgba(90, 214, 242, 0.53) 71.43%, rgba(90, 214, 242, 0.53) 85.71600000000001%,rgba(57, 207, 248, 0.53) 85.716%, rgba(57, 207, 248, 0.53) 100.002%),linear-gradient(135deg, rgb(246, 99, 200) 0%, rgb(246, 99, 200) 12.5%,rgb(223, 98, 196) 12.5%, rgb(223, 98, 196) 25%,rgb(199, 97, 192) 25%, rgb(199, 97, 192) 37.5%,rgb(176, 96, 188) 37.5%, rgb(176, 96, 188) 50%,rgb(152, 95, 184) 50%, rgb(152, 95, 184) 62.5%,rgb(129, 94, 180) 62.5%, rgb(129, 94, 180) 75%,rgb(105, 93, 176) 75%, rgb(105, 93, 176) 87.5%,rgb(82, 92, 172) 87.5%, rgb(82, 92, 172) 100%);
+
+}
+h1,h2,h3{
+    font-family: 'Lato', sans-serif;
+    line-height: 1.2;
+}
+h1{
+    color:var(--sub-heading-color);
+}
+h3{
+    color:var(--sub-heading-color);
+}
+h2{
+    /* color: #107A1B; */
+    text-decoration: underline;
+    font-weight: normal;
+    color:var(--heading-color);
+}
+
+header h1{
+    color:var(--heading-color);
+}
+
+main h1{
+    color:var(--sub-heading-color);
+}
+
+body >main p, body > main h1{max-width: 50rem;}
+
+/* body{
+    display: grid;
+    grid-template-areas:"head head"
+                        "nav nav"
+                        "main main"
+                        "foot foot";
+    grid-template-columns: 1fr 4fr;
+    grid-template-rows: auto 1fr auto;
+} */
+body{
+    display: grid;
+    grid-template-areas:"head head"
+                        "nav nav"
+                        "main main"
+                        "foot foot";
+    grid-template-columns: auto 4fr;
+    grid-template-rows: auto auto 1fr auto;
+}
+/* @media screen and (min-width:25em){
+    body{
+        grid-template-areas:"head nav"
+                            "main main"
+                            "foot foot";
+        grid-template-rows: auto 1fr auto
+        } 
+
+} */
+/* @media screen and (min-width:25em){
+   body{
+    grid-template-areas:"head nav"
+                        "main main"
+                        "foot foot";
+    grid-template-rows: auto 1fr auto
+    } 
+   
+    body>nav{
+        grid-area: nav;
+        padding-top: var(--vertical-space);
+    }
+
+    body > nav ul{
+        float:right;
+    }
+} */
+
+body>*{
+    padding-left: var(--horizontol-space);
+    padding-right: var(--horizontol-space);
+}
+
+body>header{
+    grid-area:head;
+    /* background-color: red; */
+}
+body>nav{
+    grid-area: nav;
+    /* background-color: blue; */
+}
+body>nav li{
+    padding-right: 1rem;
+}
+body>main{
+    grid-area:main;
+    /* background-color: purple;  */
+}
+
+body{
+    max-width: 50em;;
+}
+body>footer{
+    grid-area: foot;
+    /* background-color: tomato */
+    ;
+}
+
+body > main > :first-child {
+    /* border-top: 2px solid var(--sub-heading-color); */
+    /* padding-top: var(--vertical-space); */
+    display: block;
+}
+
+body>nav ul {
+    list-style-type: none;
+    padding:0;
+    margin: 0;
+    line-height: 2.4;
+    float: right;
+}
+
+body>nav ul li{
+   display: inline-block;
+   padding-right: 1em;
+}
+
+header,footer{
+    padding-top:var(--vertical-space) ;
+    padding-bottom: var(--horizontol-space);
+}
+
+header{
+    padding-bottom: 0;
+}
+
+header h1,footer h1{
+    margin:0;
+}
+
+body#portfolio ul#portfolioItems{
+    display: flex;
+    flex-wrap: wrap;
+    flex:1;
+    list-style-type: none;
+    padding: 0;
+}
+body#portfolio ul#portfolioItems li{
+    flex-basis:48%;
+    padding-right: 2%;
+}
+body#portfolio ul#portfolioItems li img{
+    /* max-width: 100%; */
+    height: 8em;
+    margin-left: -1em;
+}
+
+main{
+    background-color:rgba(var(--light-color),0.4 );
+}
+
+nav, nav a{
+    color:var(--light-color);
+}
+
+main {
+    margin-top: var(--vertical-space);
+    border-top: 3px solid var(--heading-color);
+}
+
+body#about img{
+    height:4em;
+    float: left;
+    margin-right: var(--horizontol-space);
+    box-shadow:-3px 2px 4px 0px  rgb(0,0,0 / 74%);
+    @media screen and (min-width:25em){
+        display: inline;
+        margin-bottom: var(--vertical-space);
+    }
+}
+
+body #navbar-example3{
+display: inline-flex!important;
+float: right;
+background-image: linear-gradient(45deg, rgba(254, 246, 210, 0.53) 0%, rgba(254, 246, 210, 0.53) 14.286%,rgba(221, 240, 216, 0.53) 14.286%, rgba(221, 240, 216, 0.53) 28.572%,rgba(188, 233, 223, 0.53) 28.572%, rgba(188, 233, 223, 0.53) 42.858%,rgba(156, 227, 229, 0.53) 42.858%, rgba(156, 227, 229, 0.53) 57.144%,rgba(123, 220, 235, 0.53) 57.144%, rgba(123, 220, 235, 0.53) 71.42999999999999%,rgba(90, 214, 242, 0.53) 71.43%, rgba(90, 214, 242, 0.53) 85.71600000000001%,rgba(57, 207, 248, 0.53) 85.716%, rgba(57, 207, 248, 0.53) 100.002%),linear-gradient(135deg, rgb(246, 99, 200) 0%, rgb(246, 99, 200) 12.5%,rgb(223, 98, 196) 12.5%, rgb(223, 98, 196) 25%,rgb(199, 97, 192) 25%, rgb(199, 97, 192) 37.5%,rgb(176, 96, 188) 37.5%, rgb(176, 96, 188) 50%,rgb(152, 95, 184) 50%, rgb(152, 95, 184) 62.5%,rgb(129, 94, 180) 62.5%, rgb(129, 94, 180) 75%,rgb(105, 93, 176) 75%, rgb(105, 93, 176) 87.5%,rgb(82, 92, 172) 87.5%, rgb(82, 92, 172) 100%);
+margin-bottom: var(--vertical-space);
+}
+
+body #navbar-example3 a{
+    color:#0C1787;
+    font-size: x-small;
+    
+}
